@@ -1,0 +1,4 @@
+interface:
+  display_name: "Software Factory"
+  short_description: "Configure adaptive Codex factories"
+  default_prompt: "Use $software-factory to instantiate an adaptive software factory for this project. Choose or infer a work mode, including Safe MVP when a thin real slice is needed fast, plus user involvement, Principal Executive policy, role topology, acceptance tier, permission/model policy, stop/resume, cleanup, verification cadence, and first baton."
