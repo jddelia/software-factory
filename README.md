@@ -19,13 +19,32 @@ review gates, or coordinated builder/reviewer workflows.
 ├── references/configuration.md      # Mode presets and policy reference
 ├── references/templates.md          # Factory docs, baton, review, stop/resume templates
 ├── scripts/seed_factory_docs.py     # Dependency-free project doc seeder
+├── examples/                        # Compact generated-output examples
 ├── tests/                           # Standard-library tests
 └── .github/workflows/ci.yml         # CI for compile and test checks
 ```
 
 ## Install
 
-Clone or copy this repository into your Codex skills directory:
+Install globally for Codex with the `skills` CLI:
+
+```bash
+npx skills add jddelia/software-factory --agent codex --global --yes
+```
+
+To preview what the CLI detects before installing:
+
+```bash
+npx skills add jddelia/software-factory --list
+```
+
+The `skills` CLI collects anonymous aggregate install telemetry. To opt out:
+
+```bash
+DISABLE_TELEMETRY=1 npx skills add jddelia/software-factory --agent codex --global --yes
+```
+
+Manual fallback:
 
 ```bash
 mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"

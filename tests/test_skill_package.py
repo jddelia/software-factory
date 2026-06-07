@@ -64,6 +64,11 @@ class SkillPackageTests(unittest.TestCase):
         readme = (REPO_ROOT / "README.md").read_text()
         self.assertNotIn("<owner>", readme)
         self.assertIn("https://github.com/jddelia/software-factory.git", readme)
+        self.assertIn(
+            "npx skills add jddelia/software-factory --agent codex --global --yes",
+            readme,
+        )
+        self.assertIn("DISABLE_TELEMETRY=1", readme)
 
 
 if __name__ == "__main__":
