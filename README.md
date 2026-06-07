@@ -10,6 +10,20 @@ Use it when a project needs more than a one-off edit: end-to-end builds,
 release readiness, recovery from messy worktrees, safe MVP delivery, strict
 review gates, or coordinated builder/reviewer workflows.
 
+This skill is best used in the Codex app. It is designed around Codex
+primitives such as delegated worker threads, tool permissions, browser QA,
+goal/checkpoint handling, and long-running handoffs. In runtimes with fewer
+orchestration primitives, use the seeded docs and baton protocol as a manual or
+single-thread factory workflow.
+
+For a more expansive, DB-backed implementation, see
+[Agentic Factory](https://github.com/jddelia/agentic-factory). That companion
+Codex plugin includes SQLite-backed durable state, a CLI control plane, event
+history, baton/review/verification records, pause/resume checkpoints, doctor
+checks, and markdown ledger rendering. Use this skill when you want a portable,
+docs-first factory protocol; use the plugin when you want durable state and a
+larger control plane.
+
 ## Contents
 
 ```text

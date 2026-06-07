@@ -69,6 +69,8 @@ class SkillPackageTests(unittest.TestCase):
             readme,
         )
         self.assertIn("DISABLE_TELEMETRY=1", readme)
+        self.assertIn("best used in the Codex app", readme)
+        self.assertIn("https://github.com/jddelia/agentic-factory", readme)
 
 
 if __name__ == "__main__":
