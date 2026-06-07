@@ -1,0 +1,40 @@
+name: Feature request
+description: Suggest a focused improvement to the skill, references, or generator.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Keep requests concrete and avoid sharing private project details.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What workflow, factory mode, or generated output is hard today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: What should this skill add, remove, or change?
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - SKILL.md workflow
+        - Configuration reference
+        - Templates reference
+        - seed_factory_docs.py
+        - Tests or CI
+        - Documentation
+  - type: textarea
+    id: examples
+    attributes:
+      label: Example prompt or command
+      description: Optional sanitized example that shows the intended behavior.

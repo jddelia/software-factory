@@ -48,6 +48,23 @@ class SkillPackageTests(unittest.TestCase):
             opening = "\n".join(lines[:30])
             self.assertIn("## Contents", opening, f"{path} needs quick navigation")
 
+    def test_public_package_metadata_is_present(self) -> None:
+        required_paths = [
+            "LICENSE",
+            "SECURITY.md",
+            "CONTRIBUTING.md",
+            ".github/pull_request_template.md",
+            ".github/ISSUE_TEMPLATE/bug_report.yml",
+            ".github/ISSUE_TEMPLATE/feature_request.yml",
+            "examples/safe-mvp-kickoff.md",
+        ]
+        for relative_path in required_paths:
+            self.assertTrue((REPO_ROOT / relative_path).exists(), relative_path)
+
+        readme = (REPO_ROOT / "README.md").read_text()
+        self.assertNotIn("<owner>", readme)
+        self.assertIn("https://github.com/jddelia/software-factory.git", readme)
+
 
 if __name__ == "__main__":
     unittest.main()

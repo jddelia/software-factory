@@ -29,7 +29,7 @@ Clone or copy this repository into your Codex skills directory:
 
 ```bash
 mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
-git clone https://github.com/<owner>/software-factory.git \
+git clone https://github.com/jddelia/software-factory.git \
   "${CODEX_HOME:-$HOME/.codex}/skills/software-factory"
 ```
 
@@ -95,6 +95,9 @@ python3 scripts/seed_factory_docs.py /path/to/project \
 The script is conservative: it skips existing files unless `--force` is passed.
 It has no third-party dependencies.
 
+See [examples/safe-mvp-kickoff.md](examples/safe-mvp-kickoff.md) for a compact
+example of the generated file list and kickoff packet.
+
 ## Validate
 
 Run the local checks:
@@ -129,6 +132,9 @@ That validator requires `PyYAML`.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md). Please include tests for generator
 behavior changes and keep public skill metadata aligned with `SKILL.md`.
+
+For vulnerability reports or sensitive security concerns, see
+[SECURITY.md](SECURITY.md).
 
 ## License
 
