@@ -33,6 +33,14 @@ class SkillPackageTests(unittest.TestCase):
         self.assertIn("Use when Codex should", fields["description"])
         self.assertIn("software factory", fields["description"])
 
+    def test_skill_declares_runtime_fit(self) -> None:
+        skill = (REPO_ROOT / "SKILL.md").read_text()
+
+        self.assertIn("## Runtime Fit", skill)
+        self.assertIn("Prefer the Codex app", skill)
+        self.assertIn("other agent runtimes", skill)
+        self.assertIn("comparable primitives", skill)
+
     def test_agent_metadata_has_default_prompt(self) -> None:
         metadata = (REPO_ROOT / "agents" / "openai.yaml").read_text()
 

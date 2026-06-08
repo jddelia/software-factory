@@ -28,6 +28,12 @@ Create a configurable software factory that matches the project's risk, maturity
 
 This skill is broadly applicable to software projects. Do not hard-code project-specific rules. Infer project-specific invariants from the repository, user request, specs, tests, and risk surface.
 
+## Runtime Fit
+
+Prefer the Codex app for this skill. It is optimized for Codex primitives such as delegated worker threads, tool permissions, browser QA, persistent goals/checkpoints, bounded thread reads, and long-running handoffs.
+
+Use other agent runtimes only when they provide comparable primitives or when the factory is intentionally operating in manual/single-thread mode through the seeded docs and baton protocol. When a runtime lacks a needed primitive, record it during capability preflight and downgrade topology instead of pretending the factory can run fully autonomously.
+
 ## Alignment Before Instantiation
 
 Before creating a factory, align on the minimum configuration needed for useful autonomy. Prefer a short, human-readable intake over exposing raw config.
