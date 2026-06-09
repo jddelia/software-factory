@@ -10,6 +10,8 @@ Use it when a project needs more than a one-off edit: end-to-end builds,
 release readiness, recovery from messy worktrees, safe MVP delivery, strict
 review gates, or coordinated builder/reviewer workflows.
 
+Website and examples: <https://softwarefactoryskill.com/>
+
 This skill is best used in the Codex app. It is designed around Codex
 primitives such as delegated worker threads, tool permissions, browser QA,
 goal/checkpoint handling, and long-running handoffs. In runtimes with fewer
